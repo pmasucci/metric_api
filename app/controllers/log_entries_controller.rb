@@ -1,5 +1,4 @@
 class LogEntriesController < ApplicationController
-
   before_action :set_log
 
   def index

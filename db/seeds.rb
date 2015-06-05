@@ -38,6 +38,10 @@ run_log.log_entries.create!(data: {
                                     "miles": 2,
                                     "time": 15
                                   })
+run_log.log_entries.create!(data: {
+  "miles": 2,
+  "time": 13
+})
 
 run_log.log_entries.create!(data: {
                                     "miles": 4,
@@ -64,7 +68,9 @@ beer_log.log_entries.create!(data: {
                                       "date": 4.day.ago
                                     })
 
-# run_log.representations.create!(chart_type: "bar",
-#                                 structure: {
-#                                   "x":
-#                                   })
+run_log.representations.create!(chart_type: "bar",
+                                structure: {
+                                  "x": "time/miles",
+                                  "y": "id"
+                                  }
+                                  )

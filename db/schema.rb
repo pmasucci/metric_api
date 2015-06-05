@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150602193718) do
+ActiveRecord::Schema.define(version: 20150604183140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20150602193718) do
     t.jsonb    "structure",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "formula"
   end
 
   add_index "representations", ["log_id"], name: "index_representations_on_log_id", using: :btree
