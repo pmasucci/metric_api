@@ -13,7 +13,7 @@ class LogsController < ApplicationController
   def create
     @log = Log.new(log_params)
     if @log.save
-      render json: @log, status: :created, location: logs_url
+      render json: @log, status: :created
     else
       render json: @log.errors, status: :unprocessable_entity
      end
